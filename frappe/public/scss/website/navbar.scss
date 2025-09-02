@@ -1,7 +1,9 @@
 .navbar {
 	padding: 0;
+
 	.navbar-nav {
 		align-items: center;
+
 		.nav-item {
 			height: var(--navbar-height);
 			display: flex;
@@ -28,6 +30,7 @@
 		}
 	}
 }
+
 @media (max-width: map-get($grid-breakpoints, "sm")) {
 	.navbar-collapse {
 		.navbar-nav {
@@ -37,8 +40,8 @@
 }
 
 .navbar-light {
-	border-bottom: 1px solid $border-color;
-	background: $navbar-bg;
+	//border-bottom: 1px solid $border-color;
+	background: linear-gradient(135deg, #cbe5e7, #36d1dc) !important;
 
 	.navbar-toggler .icon {
 		stroke: none;
@@ -148,6 +151,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	.nav-link {
 		max-width: 200px;
 		@extend .ellipsis;

@@ -2,11 +2,13 @@
 
 body {
 	@include media-breakpoint-up(sm) {
-		background-color: var(--bg-light-gray);
+		background: linear-gradient(135deg, #cbe5e7, #36d1dc);
 	}
+
 	.page-content-wrapper {
 		min-height: calc(100vh - 220px);
 	}
+
 	.web-footer {
 		display: none;
 	}
@@ -46,11 +48,14 @@ body {
 		}
 
 		.page-card-body {
-			::placeholder, /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+			::placeholder,
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
 			::-ms-input-placeholder {
 				/* Microsoft Edge */
 				color: var(--text-light);
-				opacity: 1; /* Firefox */
+				opacity: 1;
+				/* Firefox */
 			}
 
 			input[type="text"],
@@ -64,6 +69,7 @@ body {
 			}
 
 			&.invalid {
+
 				input[type="text"],
 				input[type="email"],
 				input[type="password"] {
@@ -79,7 +85,7 @@ body {
 				text-align: right;
 				line-height: 1;
 
-				> * {
+				>* {
 					color: var(--text-light);
 					@include get_textstyle("sm", "regular");
 				}
@@ -146,6 +152,7 @@ body {
 						@include media-breakpoint-up(md) {
 							min-width: 33.33%;
 						}
+
 						min-width: 50%;
 						padding: 0 4px;
 						margin-bottom: var(--margin-md);
@@ -168,6 +175,7 @@ body {
 		margin-bottom: 0;
 		color: var(--text-light);
 		@include get_textstyle("base", "regular");
+
 		a {
 			color: var(--primary);
 		}
@@ -178,20 +186,25 @@ body {
 	}
 
 	@-webkit-keyframes wiggle {
+
 		8%,
 		41% {
 			-webkit-transform: translateX(-10px);
 		}
+
 		25%,
 		58% {
 			-webkit-transform: translateX(10px);
 		}
+
 		75% {
 			-webkit-transform: translateX(-5px);
 		}
+
 		92% {
 			-webkit-transform: translateX(5px);
 		}
+
 		0%,
 		100% {
 			-webkit-transform: translateX(0);
@@ -207,7 +220,7 @@ body {
 	font-weight: 600;
 
 	img {
-		max-height: 42px;
+		max-height: 108px;
 	}
 
 	h4 {
