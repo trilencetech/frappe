@@ -268,7 +268,7 @@
  "icon": "fa fa-print",
  "idx": 1,
  "links": [],
- "modified": "2025-02-14 14:49:39.181074",
+ "modified": "2025-12-13 11:09:45.903678",
  "modified_by": "Administrator",
  "module": "Printing",
  "name": "Print Format",
@@ -289,8 +289,31 @@
   {
    "role": "Desk User",
    "select": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gajanand Account Admin",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "GajanandAccount",
+   "share": 1,
+   "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
