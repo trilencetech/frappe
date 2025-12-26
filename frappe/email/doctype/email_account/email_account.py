@@ -71,6 +71,7 @@ class EmailAccount(Document):
 		awaiting_password: DF.Check
 		backend_app_flow: DF.Check
 		brand_logo: DF.AttachImage | None
+		company: DF.Link | None
 		connected_app: DF.Link | None
 		connected_user: DF.Link | None
 		create_contact: DF.Check

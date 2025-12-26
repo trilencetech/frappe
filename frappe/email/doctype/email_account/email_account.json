@@ -10,6 +10,7 @@
   "account_section",
   "email_id",
   "email_account_name",
+  "company",
   "column_break_3",
   "domain",
   "service",
@@ -636,13 +637,19 @@
    "fieldtype": "Data",
    "label": "Always BCC Address",
    "options": "Email"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
   }
  ],
  "icon": "fa fa-inbox",
  "index_web_pages_for_search": 1,
  "links": [],
  "make_attachments_public": 1,
- "modified": "2025-04-03 13:19:11.021118",
+ "modified": "2025-12-27 00:01:59.535804",
  "modified_by": "Administrator",
  "module": "Email",
  "name": "Email Account",
@@ -661,6 +668,7 @@
    "role": "Inbox User"
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
