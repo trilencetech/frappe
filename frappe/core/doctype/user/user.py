@@ -76,6 +76,7 @@ class User(Document):
 		block_modules: DF.Table[BlockModule]
 		bulk_actions: DF.Check
 		bypass_restrict_ip_check_if_2fa_enabled: DF.Check
+		customer: DF.Link | None
 		dashboard: DF.Check
 		default_app: DF.Literal[None]
 		default_workspace: DF.Link | None
