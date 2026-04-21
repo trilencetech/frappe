@@ -3,6 +3,7 @@
 		background-color: #d1d8dd;
 		padding: 30px 0px;
 	}
+
 	.print-format {
 		background-color: white;
 		border-radius: 8px;
@@ -104,8 +105,21 @@
 }
 
 .print-format {
-	font-size: {{ print_settings.font_size|flt or 9 }}pt;
-	font-family: {{ font }};
+	font-size: {
+			{
+			print_settings.font_size|flt or 9
+		}
+	}
+
+	pt;
+
+	font-family: {
+			{
+			font
+		}
+	}
+
+	;
 	-webkit-print-color-adjust:exact;
 }
 
@@ -121,11 +135,13 @@
 .print-heading h2 {
 	margin: 0px;
 }
+
 .print-heading h4 {
 	margin-top: 5px;
 }
 
-table.no-border, table.no-border td {
+table.no-border,
+table.no-border td {
 	border: 0px;
 }
 
@@ -139,13 +155,14 @@ table.no-border, table.no-border td {
 	max-width: 100%;
 }
 
-.print-format table td > .primary:first-child {
+.print-format table td>.primary:first-child {
 	font-weight: bold;
 }
 
-.print-format td, .print-format th {
+.print-format td,
+.print-format th {
 	vertical-align: top !important;
-	padding: 6px !important;
+	padding: 4px !important;
 }
 
 .print-format p {
@@ -158,15 +175,23 @@ table.no-border, table.no-border td {
 }
 
 table td div {
-	{% if not print_settings.allow_page_break_inside_tables %}
+		{
+		% if not print_settings.allow_page_break_inside_tables %
+	}
+
 	/* needed to avoid partial cutting of text between page break in wkhtmltopdf */
 	page-break-inside: avoid !important;
-	{% endif %}
+
+		{
+		% endif %
+	}
 }
 
 /* hack for webkit specific browser */
 @media (-webkit-min-device-pixel-ratio:0) {
-	thead, tfoot {
+
+	thead,
+	tfoot {
 		display: table-header-group;
 	}
 }
