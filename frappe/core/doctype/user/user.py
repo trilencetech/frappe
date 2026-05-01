@@ -118,6 +118,7 @@ class User(Document):
 		new_password: DF.Password | None
 		notifications: DF.Check
 		onboarding_status: DF.SmallText | None
+		party_customer: DF.Link | None
 		phone: DF.Data | None
 		redirect_url: DF.SmallText | None
 		reset_password_key: DF.Data | None

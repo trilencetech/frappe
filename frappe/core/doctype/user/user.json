@@ -18,6 +18,7 @@
   "full_name",
   "username",
   "customer",
+  "party_customer",
   "column_break_11",
   "language",
   "time_zone",
@@ -818,6 +819,12 @@
    "fieldtype": "Link",
    "label": "Customer",
    "options": "Customer"
+  },
+  {
+   "fieldname": "party_customer",
+   "fieldtype": "Link",
+   "label": "Party",
+   "options": "Party Master"
   }
  ],
  "icon": "fa fa-user",
@@ -881,7 +888,7 @@
   }
  ],
  "make_attachments_public": 1,
- "modified": "2026-02-18 16:24:06.066284",
+ "modified": "2026-04-30 19:53:34.856810",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "User",
