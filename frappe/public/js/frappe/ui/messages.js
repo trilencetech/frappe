@@ -296,7 +296,7 @@ frappe.msgprint = function (msg, title, is_minimizable) {
 	frappe.msg_dialog.msg_area.append(data.message);
 
 	// make msgprint always appear on top
-	frappe.msg_dialog.$wrapper.css("z-index", 2000);
+	frappe.msg_dialog.$wrapper.css("z-index", 99999);
 	frappe.msg_dialog.show();
 
 	return frappe.msg_dialog;
@@ -387,7 +387,7 @@ frappe.show_progress = (title, count, total = 100, description, hide_on_completi
 		// timeout to avoid abrupt hide
 		setTimeout(frappe.hide_progress, 500);
 	}
-	frappe.cur_progress.$wrapper.css("z-index", 2000);
+	frappe.cur_progress.$wrapper.css("z-index", 99999);
 	return dialog;
 };
 
