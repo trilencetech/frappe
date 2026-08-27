@@ -29,7 +29,9 @@ class RoleProfile(Document):
 		self.clear_cache()
 		self.queue_action(
 			"update_all_users",
-			now=frappe.flags.in_test or frappe.flags.in_install,
+			# See module_profile.py's on_update for why in_migrate is included
+			# here too - Role Profile is also fixture-synced on every migrate.
+			now=frappe.flags.in_test or frappe.flags.in_install or frappe.flags.in_migrate,
 			enqueue_after_commit=True,
 		)
 

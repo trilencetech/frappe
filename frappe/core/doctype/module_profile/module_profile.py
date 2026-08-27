@@ -31,7 +31,14 @@ class ModuleProfile(Document):
         self.clear_cache()
         self.queue_action(
             "update_all_users",
-            now=frappe.flags.in_test or frappe.flags.in_install,
+            # Run synchronously (rather than enqueuing) during tests, install,
+            # and migrate/fixture-sync - queuing here creates a document lock
+            # that's only released once a background worker picks up the job.
+            # In a deploy pipeline, migrate can re-run (and re-save this same
+            # fixture record) before that happens, so the still-active lock
+            # from the previous run makes check_if_locked() throw and aborts
+            # the whole migrate, failing every fixture - not just this one.
+            now=frappe.flags.in_test or frappe.flags.in_install or frappe.flags.in_migrate,
             enqueue_after_commit=True,
         )
 
