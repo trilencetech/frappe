@@ -29,11 +29,11 @@ class ModuleProfile(Document):
 
     def on_update(self):
         self.clear_cache()
-        # self.queue_action(
-        # "update_all_users",
-        # now=frappe.flags.in_test or frappe.flags.in_install,
-        # enqueue_after_commit=True,
-        # )
+        self.queue_action(
+            "update_all_users",
+            now=frappe.flags.in_test or frappe.flags.in_install,
+            enqueue_after_commit=True,
+        )
 
     def update_all_users(self):
         """Changes in module_profile reflected across all its user"""
