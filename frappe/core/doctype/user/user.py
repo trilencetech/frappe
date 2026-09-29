@@ -74,6 +74,7 @@ class User(Document):
 		bio: DF.SmallText | None
 		birth_date: DF.Date | None
 		block_modules: DF.Table[BlockModule]
+		branch_pf: DF.Link | None
 		bulk_actions: DF.Check
 		bypass_restrict_ip_check_if_2fa_enabled: DF.Check
 		customer: DF.Link | None
