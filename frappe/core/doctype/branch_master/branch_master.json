@@ -27,7 +27,7 @@
  ],
  "index_web_pages_for_search": 0,
  "links": [],
- "modified": "2026-09-28 00:00:00.000000",
+ "modified": "2026-11-20 11:23:22.306954",
  "modified_by": "Administrator",
  "module": "Core",
  "name": "Branch Master",
@@ -64,6 +64,13 @@
    "read": 1,
    "report": 1,
    "role": "Plate Flow User"
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Plate Flow Accountant"
   }
  ],
  "row_format": "Dynamic",
